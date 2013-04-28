@@ -1,0 +1,2 @@
+import "import_test.bellejs";
+import "simple_javascript.bellejs";
