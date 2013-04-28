@@ -26,4 +26,11 @@ class TestBelleTranspiler < Test::Unit::TestCase
     assert_equal File.read("#{TEST_FILE_DIRECTORY}recursive_double_import.js"), (File.read("#{TEST_FILE_DIRECTORY}simple_javascript.js")+"\n"+File.read("#{TEST_FILE_DIRECTORY}simple_javascript.js"))
   end
 
+  def test_subdir_import
+    # try to import a file in a different directory
+    file_path = TEST_FILE_DIRECTORY + "subdir_import_test.bellejs"
+    bellejs = Bellejs.new(file_path)
+    assert_equal File.read("#{TEST_FILE_DIRECTORY}subdir_import_test.js"), File.read("#{TEST_FILE_DIRECTORY}subdir/test_file_NaME.js")
+  end
+
 end
