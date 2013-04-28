@@ -49,6 +49,12 @@ class BelleTranspiler
      replace_bellejs ast
   end
 
+  def process_bellejs_class
+
+  end
+
+  # debug helpers:
+
   def print_tree(tree)
     tree.each do |node|
       puts node.value

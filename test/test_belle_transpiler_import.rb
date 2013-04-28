@@ -1,7 +1,7 @@
 require 'test/unit'
 require 'bellejs/belle_transpiler'
 
-class TestBelleTranspiler < Test::Unit::TestCase
+class TestBelleTranspilerImport < Test::Unit::TestCase
 
   TEST_FILE_DIRECTORY = './test/test_files/'
 
