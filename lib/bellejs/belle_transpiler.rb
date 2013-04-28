@@ -21,15 +21,18 @@ class BelleTranspiler
 
   def replace_bellejs(parse_tree)
     parse_tree.each do |node|
-      if node.value.class == Array and BELLEJS_NODE_CLASSES.include?(node.value.first.class)
-        node.value[0] = evaluate(node.value[0])
-      end
-      if BELLEJS_NODE_CLASSES.include?(node.class)
-        #node = evaluate(node)
-        puts "OLD: " + node.to_s
-        node2 = evaluate(node).to_s
-        puts "NEW: " + node2.to_s
-        node.value = node2.value
+      #if node.value.class == Array and BELLEJS_NODE_CLASSES.include?(node.value.first.class)
+      #  node.value[0] = evaluate(node.value[0])
+      #end
+      if node.class == RBelly::Nodes::SourceElementsNode
+        source_array = node.value
+        i = 0
+        source_array.each do |element|
+          if BELLEJS_NODE_CLASSES.include?(element.class)
+            node.value[i] =evaluate(node.value[i])
+          end
+          i+=1
+        end
       end
     end
     parse_tree
