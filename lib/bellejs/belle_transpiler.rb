@@ -75,6 +75,10 @@ class BelleTranspiler
     js_decl_statement = var_statement.var_statement.value.first
     var_name = js_decl_statement.name
     var_value = (js_decl_statement.value == nil ? nil : js_decl_statement.value.value.value)
+    if var_value.class == RBelly::Nodes::ResolveNode
+       #object declaration
+      var_value = "new " + var_value.value.to_s
+    end
     var_value = js_decl_statement.value.value.to_ecma if var_value.class == Array
     var_value_statement = (var_value.nil? ? ";" : " = " + var_value.to_s + ";")
     is_constant = js_decl_statement.constant?

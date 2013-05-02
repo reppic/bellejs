@@ -1,6 +1,7 @@
 class Alligator {
 
     private var tooth;
+    private var eye = new Eye();
     private var genitals = "thing";
     public var face = 2345;
     public var tail = ['scaly','green','long']

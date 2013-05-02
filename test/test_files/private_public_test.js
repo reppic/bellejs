@@ -1,5 +1,6 @@
 function Alligator(){
     var tooth;
+    var eye = new Eye();
     var genitals = "thing";
     this.face = 2345;
     this.tail = ['scaly', 'green', 'long'];
