@@ -32,6 +32,8 @@ There's also the option to minify the output by passing the '-m' flag
 
 Much of the language parsing is done with a gem called rbelly, which is an extension of the rkelly gem (http://rkelly.rubyforge.org/) written by Aaron Patterson.
 
+Bellejs also makes use of Uglifier (https://github.com/lautis/uglifier) written by Ville Lautanala for javascript minification.
+
 == License
 
 The MIT License
