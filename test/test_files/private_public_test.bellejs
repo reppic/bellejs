@@ -1,0 +1,16 @@
+class Alligator {
+
+    private var tooth;
+    private var genitals = "thing";
+    public var face = 2345;
+    public var tail = ['scaly','green','long']
+
+    private function pickNose() {
+        alert("adsf");
+    }
+
+    public function walk(arg1, arg2) {
+       alert(this.face);
+    }
+
+}

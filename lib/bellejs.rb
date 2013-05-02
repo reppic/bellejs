@@ -1,13 +1,15 @@
 require "bellejs/version"
 require 'bellejs/belle_transpiler'
+require 'uglifier'
 
 class Bellejs
 
-  def initialize(input_file, output_file = nil)
+  def initialize(input_file, output_file = nil, minify = false)
     @local_dir = File.dirname(input_file)
     @output_path = get_output_path(input_file, output_file)
     @file_contents = get_file_contents(input_file)
     @compiled_js = compile(@file_contents)
+    uglify_js if minify
     write
   end
 
@@ -40,6 +42,10 @@ class Bellejs
   def compile(file_contents)
     transpiler = BelleTranspiler.new(file_contents, @local_dir)
     transpiler.transpile # <-- where the magic happens
+  end
+
+  def uglify_js
+    @compiled_js = Uglifier.compile(@compiled_js, :compress => {:unused => false, })
   end
 
   def write

@@ -1,7 +1,5 @@
-function Dog() {
-
-    function bark() {
-        alert("woof woof!");
-    }
-
+function Dog(){
+    function bark(){
+    alert("woof woof!");
+  }
 }

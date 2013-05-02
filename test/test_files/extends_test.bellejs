@@ -1,0 +1,15 @@
+class Animal {
+    this.makeNoise = function () {
+        alert("-rustle-");
+    }
+}
+
+class Wolf extends Animal {
+    this.howl = function () {
+        alert("Hooooooowlllllll!");
+    }
+
+    this.makeNoise = function () {
+        this.howl();
+    }
+}
