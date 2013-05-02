@@ -1,5 +1,7 @@
 = bellejs (alpha)
 
+* https://rubygems.org/gems/bellejs
+
 == DESCRIPTION
 
 Bellejs is an extension of javascript. It currently provides import statements, as well as an alternate, more friendly
