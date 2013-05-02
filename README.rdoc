@@ -1,0 +1,55 @@
+= bellejs (alpha)
+
+== DESCRIPTION
+
+Bellejs is an extension of javascript. It currently provides import statements, as well as an alternate, more friendly
+way to write classes, class inheritance, public/private variable and public/private function declarations.
+
+This repo contains the gem that will transpile .bellejs code into valid javascript. Notice that since bellejs is just
+an extension of javascript that any valid javascript is also valid bellejs (but not the other way around.)
+
+== Installation
+
+    gem install bellejs
+
+== Getting Started
+
+Bellejs comes with a handy command line tool for easy use.
+
+Transpile a bellejs file into javascript:
+    bellejs input_file.bellejs
+
+You can also specify outputs
+    bellejs input_file.bellejs ./subdir/output.js
+
+There's also the option to minify the output by passing the '-m' flag
+    bellejs input_file.bellejs -m
+
+
+== Acknowledgments
+
+Much of the language parsing is done with a gem called rbelly, which is an extension of the rkelly gem (http://rkelly.rubyforge.org/) written by Aaron Patterson.
+
+== License
+
+The MIT License
+
+Copyright (c) 2013 Ryan Epp
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE
