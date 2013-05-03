@@ -27,6 +27,29 @@ You can also specify outputs
 There's also the option to minify the output by passing the '-m' flag
     bellejs input_file.bellejs -m
 
+== Examples
+
+Import Statement
+    import "dir/file_path_as_string.bellejs";
+
+Class Declaration and Extension
+    class Foo { ... }
+    class Bar extends Foo { ... }
+
+Public and Private variables and functions
+    class Cat {
+        private var lives = 9;
+        public var name;
+
+        public function setName(inName) {
+          this.name = inName;
+        }
+
+        private function hairball() {
+            ...
+        }
+
+    }
 
 == Acknowledgments
 
